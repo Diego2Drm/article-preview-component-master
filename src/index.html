@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | Article preview component</title>
+
+  <script src="https://kit.fontawesome.com/74d5ca2fd4.js" crossorigin="anonymous"></script>
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <section>
+      <div class="img-mian">
+        <img src="./images/drawers.jpg" alt="">
+      </div>
+      <section class="text__content">
+        <div class="text__info">
+          <h1>Shift the overall look and feel by adding these wonderful touches to furniture in your home</h1>
+          <p>
+            Ever been in a room and felt like something was missing? Perhaps
+            it felt slightly bare and uninviting. I’ve got some simple tips
+            to help you make any room feel complete.
+          </p>
+        </div>
+        <div class="user">
+          <div>
+            <img src="./images/avatar-michelle.jpg" alt="Michelle">
+            <p>Michelle Appleton
+              <span>28 Jun 2020</span>
+            </p>
+          </div>
+            <div class="icon-share">
+              <i class="fa-solid fa-share"></i>
+            </div>
+        </div>
+        <div class="share-container inactive">
+          <p>Share</p>
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+      </section>
+    </section>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/Diego2Drm">Diego Ramírez</a>.
+    </div>
+  </main>
+
+  <script>
+    const btnShare = document.querySelector('.icon-share');
+    const shareInfo = document.querySelector('.share-container');
+    btnShare.addEventListener('click', () =>{
+      shareInfo.classList.toggle('inactive')
+      btnShare.classList.toggle('icon-share--click')
+    })
+  </script>
+</body>
+
+</html>
